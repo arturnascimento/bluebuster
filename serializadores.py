@@ -1,7 +1,7 @@
 #generos
 def genero_from_web(**kwargs):
     return {
-        "nome": kwargs["nome"] if kwargs["nome"] else ""
+        "nome": kwargs["nome"] if "nome" in kwargs else "",
     }
 def genero_from_db(*args):
     return {
@@ -12,12 +12,12 @@ def genero_from_db(*args):
 #filmes
 def filme_from_web(**kwargs):
     return {
-        "titulo": kwargs["titulo"] if kwargs["titulo"] else "",
-        "ano": kwargs["ano"] if kwargs["ano"] else "",
-        "classificacao": kwargs["classificacao"] if kwargs["classificacao"] else "",
-        "preco": kwargs["preco"] if kwargs["preco"] else "",
-        "diretores_id": kwargs["diretores_id"] if kwargs["diretores_id"] else "",
-        "generos_id": kwargs["generos_id"] if kwargs["generos_id"] else ""
+        "titulo": kwargs["titulo"] if "titulo" in kwargs else "",
+        "ano": kwargs["ano"] if "ano" in kwargs else "",
+        "classificacao": kwargs["classificacao"] if "classificacao" in kwargs else "",
+        "preco": kwargs["preco"] if "preco" in kwargs else "",
+        "diretores_id": kwargs["diretores_id"] if "diretores_id" in kwargs else "",
+        "generos_id": kwargs["generos_id"] if "generos_id" in kwargs else ""
     }
 def filme_from_db(*args):
     return {
@@ -33,8 +33,8 @@ def filme_from_db(*args):
 #usuarios
 def usuario_from_web(**kwargs):
     return {
-        "nome_completo": kwargs["nome_completo"] if kwargs["nome_completo"] else "",
-        "cpf": kwargs["cpf"] if kwargs["cpf"] else ""
+        "nome_completo": kwargs["nome_completo"] if "nome_completo" in kwargs else "",
+        "cpf": kwargs["cpf"] if "cpf" in kwargs else ""
     }
 def usuario_from_db(*args):
     return {
@@ -46,7 +46,7 @@ def usuario_from_db(*args):
 #diretores
 def diretor_from_web(**kwargs):
     return {
-        "nome_completo": kwargs["nome_completo"] if kwargs["nome_completo"] else ""
+        "nome_completo": kwargs["nome_completo"] if "nome_completo" in kwargs else ""
     }
 def diretor_from_db(*args):
     return {

@@ -11,7 +11,7 @@ app = Flask (__name__)
 
 # Criando genero, filme, usuário e diretor
 @app.route ("/generos", methods=["POST"])
-def addGenero():
+def addgenero():
     genero = genero_from_web (**request.json)
     if valida_genero (**genero):
         insert_genero (**genero)
@@ -21,7 +21,7 @@ def addGenero():
 
 
 @app.route ("/filmes", methods=["POST"])
-def addFilme():
+def addfilme():
     filme = filme_from_web (**request.json)
     if valida_filme (**filme):
         insert_filme (**filme)
@@ -31,7 +31,7 @@ def addFilme():
 
 
 @app.route ("/usuarios", methods=["POST"])
-def addUsuario():
+def addusuario():
     usuario = usuario_from_web (**request.json)
     if valida_usuario (**usuario):
         insert_usuario (**usuario)
@@ -40,7 +40,7 @@ def addUsuario():
         return jsonify ({"Usuário inválido!!"})
 
 @app.route ("/diretores", methods=["POST"])
-def addDiretor():
+def adddiretor():
     diretor = diretor_from_web (**request.json)
     if valida_diretor (**diretor):
         insert_diretor (**diretor)

@@ -1,4 +1,4 @@
-from main import insert, select, update, delete
+from funcoesbd import insert, select, update, delete
 
 #insert generos, filmes, usuarios e diretores
 def insert_genero(nome):
