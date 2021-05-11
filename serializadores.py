@@ -10,6 +10,9 @@ def genero_from_db(*args):
 def get_genero_from_web(**kwargs):
     return kwargs["nome"] if "nome" in kwargs else ""
 
+def getu_genero_from_web(args):
+    return kwargs["nome"] if "nome" in kwargs else ""
+
 
 #filmes
 def filme_from_web(**kwargs):
@@ -22,13 +25,19 @@ def filme_from_web(**kwargs):
         "generos_id": kwargs["generos_id"] if "generos_id" in kwargs else "",
     }
 
-def filme_from_db(*args):
+def filme_from_db(args):
     return {
         "Filme": args[0]
     }
 
 def nomefilme_from_web(**kwargs):
     return kwargs["titulo"] if "titulo" in kwargs else ""
+
+def nomefilme_from_db(args):
+    # print(args[0])
+    return {
+        "filme": args[0]
+            }
 
 
 #usuarios
@@ -37,7 +46,7 @@ def usuario_from_web(**kwargs):
         "nome_completo": kwargs["nome_completo"] if "nome_completo" in kwargs else "",
         "cpf": kwargs["cpf"] if "cpf" in kwargs else ""
     }
-def usuario_from_db(*args):
+def usuario_from_db(args):
     return {
     "usuario": args[0]
     }
