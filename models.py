@@ -44,16 +44,16 @@ def delete_diretor(id, nome_completo):
 
 # delete generos, filmes, usuarios e diretores
 def select_genero(nome):
-    select("generos","nome", nome)
+    return select("generos","nome", nome)
 
-def select_filme(titulo, ano, classificacao, preco, diretores_id, generos_id):
-    select("filmes", "titulo", titulo, "ano", ano, "classificacao", classificacao, "preco", preco, "diretores_id", diretores_id, "generos_id", generos_id)
+def select_filme(titulo):
+    return select("filmes", "titulo", titulo)
 
-def select_usuario(nome_completo, cpf):
-    select("usuarios","nome_completo", nome_completo, "cpf", cpf)
+def select_usuario(nome_completo):
+    select("usuarios","nome_completo", nome_completo)
 
 def select_diretor(nome_completo):
-    select("diretores", "nome_completo", nome_completo)
+    return select("diretores", "nome_completo", nome_completo)
 
 
 
