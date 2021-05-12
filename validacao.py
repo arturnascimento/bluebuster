@@ -1,4 +1,3 @@
-
 #validacao do tabela gênero.
 def valida_genero(nome):
     if len(nome) == 0:
@@ -25,10 +24,10 @@ def valida_filme(titulo, ano, classificacao, preco, diretores_id, generos_id):
         return True
 
 #validação tabela usuários
-def valida_usuario(nome_completo, cpf):
+def valida_usuario(nome_completo, CPF):
     if len(nome_completo) == 0:
         return False
-    elif len(cpf) != 14:
+    elif len(CPF) != 14:
         return False
     else:
         return True
@@ -39,5 +38,3 @@ def valida_diretor(nome_completo):
         return False
     else:
         return True
-
-

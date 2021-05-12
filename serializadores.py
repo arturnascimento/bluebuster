@@ -1,19 +1,15 @@
 #generos
 def genero_from_web(**kwargs):
-    return {"nome": kwargs["nome"] if "nome" in kwargs else ""}
-
-def genero_from_db(*args):
-    return {
-        "genero":  args[0]
+    return{
+       "nome": kwargs["nome"] if "nome" in kwargs else ""
     }
-
-def get_genero_from_web(**kwargs):
+def nome_genero_from_web(**kwargs):
     return kwargs["nome"] if "nome" in kwargs else ""
-
-def getu_genero_from_web(args):
-    return kwargs["nome"] if "nome" in kwargs else ""
-
-
+def genero_from_db(args):
+    return {
+        "id": args["id"],
+        "nome": args["nome"],
+    }
 #filmes
 def filme_from_web(**kwargs):
     return {
@@ -24,43 +20,50 @@ def filme_from_web(**kwargs):
         "diretores_id": kwargs["diretores_id"] if "diretores_id" in kwargs else "",
         "generos_id": kwargs["generos_id"] if "generos_id" in kwargs else "",
     }
-
 def filme_from_db(args):
-    return {
-        "Filme": args[0]
+    return{
+        "id": args["id"],
+        "titulo": args["titulo"],
+        "ano": args["ano"],
+        "classificacao": args["classificacao"],
+        "preco": str(args["preco"]),
+        "diretores_id": args["diretores_id"],
+        "generos_id": args["generos_id"],
     }
-
-def nomefilme_from_web(**kwargs):
+def titulo_filme_from_web(**kwargs):
     return kwargs["titulo"] if "titulo" in kwargs else ""
-
-def nomefilme_from_db(args):
-    # print(args[0])
-    return {
-        "filme": args[0]
-            }
-
 
 #usuarios
 def usuario_from_web(**kwargs):
     return {
         "nome_completo": kwargs["nome_completo"] if "nome_completo" in kwargs else "",
-        "cpf": kwargs["cpf"] if "cpf" in kwargs else ""
+        "CPF": kwargs["CPF"] if "CPF" in kwargs else ""
     }
 def usuario_from_db(args):
     return {
-    "usuario": args[0]
+        "id": args["id"],
+        "nome_completo": args["nome_completo"],
+        "CPF": args["CPF"],
     }
-def get_usuario_from_web(**kwargs):
-    return kwargs["nome_completo"] if "nome_completo" in kwargs else "", kwargs["cpf"] if "cpf" in kwargs else ""
+def nome_usuario_from_web(**kwargs):
+    return kwargs["nome_completo"] if "nome_completo" in kwargs else ""
 
 #diretores
 def diretor_from_web(**kwargs):
+    return {
+        "nome_completo": kwargs["nome_completo"] if "nome_completo" in kwargs else ""
+    }
+def diretor_from_db(args):
+    return {
+        "id": args["id"],
+        "nome_completo": args["nome_completo"],
+            }
+def nome_diretor_from_web(**kwargs):
     return kwargs["nome_completo"] if "nome_completo" in kwargs else ""
 
-def diretor_from_db(*args):
-    return {
-        "nome diretor":  args[0]
-    }
+
+
+
 
 
 
